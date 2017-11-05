@@ -61,8 +61,8 @@ pipeline.exec();
 
 さらに詳しくは以下を参照してください。
 
-jp.ksgwr.parallelstream.sample.ParallelStreamSample
-jp.ksgwr.pipeline.sample.PipelineSample
+[jp.ksgwr.parallelstream.sample.ParallelStreamSample](src/test/java/jp/ksgwr/pipeline/sample/ParallelStreamSample.java)  
+[jp.ksgwr.pipeline.sample.PipelineSample](src/test/java/jp/ksgwr/pipeline/sample/PipelineSample.java)
 
 
 ## 使い方
