@@ -1,6 +1,6 @@
-Parallel Pipeline Library
+# Parallel Pipeline Library
 
-概要
+## 概要
 
 パイプライン型の処理を実装するのを手助けするライブラリ
 特徴として、並列処理パイプを実装しており、出力は入力ファイルの順序通りに出力する機能を実装しています。
@@ -8,12 +8,28 @@ Java8のStreamでは並列処理時は出力の順序を規定していません
 通信を含むバッチ処理を効率的に処理することができることが本ライブラリの特徴です。
 
 
-インストール
+## インストール
 
-parallelpipeline-1.0.0.jarを依存に含めてください
+pom.xmlに下記を設定します。
 
+```
+<repositories>
+  <repository>
+    <id>ksgwr-repo</id>
+    <url>http://ksgwr.github.io/mvn-repo/</url>
+  </repository>
+</repositories>
 
-サンプル
+<dependencies>
+  <dependency>
+    <groupId>jp.ksgwr</groupId>
+    <artifactId>msgpack-template</artifactId>
+    <version>0.0.1</version>
+  </dependency>
+</dependencies>
+```
+
+## サンプル
 
 ```
 Pipeline pipeline = new Pipeline(new Pipe[]{
@@ -49,10 +65,10 @@ jp.ksgwr.parallelstream.sample.ParallelStreamSample
 jp.ksgwr.pipeline.sample.PipelineSample
 
 
-使い方
+## 使い方
 
 Function#printOutputを実装します。出力がないときはnullを返します。
 
-ライセンス
+## ライセンス
 
 Apache License, Version 2.0
