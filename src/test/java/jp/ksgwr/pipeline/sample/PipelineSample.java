@@ -20,7 +20,7 @@ public class PipelineSample {
 	 */
 	public static void main(String[] args) throws Exception {
 		Pipeline pipeline = new Pipeline(new Pipe[]{
-				new InTap(new File("data/test"), "UTF-8"),
+				new InTap(new File("src/test/resources/data/test"), "UTF-8"),
 				new FunctionPipe(new Function(){
 					@Override
 					public String printOutput(String line) {

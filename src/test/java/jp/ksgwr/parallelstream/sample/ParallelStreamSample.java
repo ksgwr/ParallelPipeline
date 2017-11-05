@@ -1,6 +1,5 @@
 package jp.ksgwr.parallelstream.sample;
 
-import java.io.File;
 import java.util.Random;
 
 import jp.ksgwr.parallelstream.Function;
@@ -17,17 +16,6 @@ public class ParallelStreamSample {
 	public static void main(String[] args) throws Exception {
 		long start,end;
 
-		/*
-		start = System.currentTimeMillis();
-		BufferedReader br = new BufferedReader(new FileReader(new File("data/test")));
-		while(br.ready()) {
-			System.out.println(br.readLine());
-		}
-		br.close();
-		end = System.currentTimeMillis() - start;
-		System.out.println(end);
-		*/
-
 		ParallelStream ps = ParallelStreamFactory.createInstance(new Function() {
 
 			@Override
@@ -39,7 +27,8 @@ public class ParallelStreamSample {
 				}
 				return line;
 			}
-		}, new File("data/test"), System.out, true);
+		}, ParallelStream.class.getClassLoader().getResourceAsStream("data/test"), System.out, true);
+
 		start = System.currentTimeMillis();
 		ps.exec();
 		end = System.currentTimeMillis() - start;
