@@ -1,4 +1,4 @@
-# Parallel Pipeline Library
+# Parallel Pipeline Library [![Build Status](https://travis-ci.org/ksgwr/ParallelPipeline.svg?branch=master)](https://travis-ci.org/ksgwr/ParallelPipeline)
 
 ## 概要
 
